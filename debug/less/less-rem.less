@@ -1,0 +1,26 @@
+@remFac: 50;
+@remUIWidth: 720;
+
+.rem_base() {
+	@rem-base: @remUIWidth / @remFac;
+}
+.px2rem(@px, @name: font-size){
+	.rem_base();
+	@{name}: unit(@px, px);
+    @{name}: unit(@px / @rem-base, rem);
+}
+.px2rem_2(@px1, @px2, @name:font-size) {
+	.rem_base();
+	@{name}: unit(@px1, px) unit(@px2, px);
+    @{name}: unit(@px1 / @rem-base, rem) unit(@px2 / @rem-base, rem);
+}
+.px2rem_3(@px1, @px2, @px3, @name:font-size) {
+	.rem_base();
+	@{name}: unit(@px1, px) unit(@px2, px) unit(@px3, px);
+    @{name}: unit(@px1 / @rem-base, rem) unit(@px2 / @rem-base, rem) unit(@px3 / @rem-base, rem);
+}
+.px2rem_4(@px1, @px2,  @px3, @px4, @name:font-size) {
+	.rem_base();
+	@{name}: unit(@px1, px) unit(@px2, px) unit(@px3, px) unit(@px4, px);
+    @{name}: unit(@px1 / @rem-base, rem) unit(@px2 / @rem-base, rem) unit(@px3 / @rem-base, rem) unit(@px4 / @rem-base, rem);
+}

@@ -1,0 +1,38 @@
+//用于居右的请选择等after伪类灰色小箭头
+.mod_arrow_after(@content: '>') {
+	content: @content;
+	color: #9B9B9B;
+	display: inline-block;
+	.px2rem(24px);
+	.px2rem(16px, padding-left);
+	.arial;
+	.no-text();
+	background: url('@{img}link_arrow.png') no-repeat 50% 50%;
+	background-size: contain;
+	.px2rem(12px, margin-left);
+}
+
+.mod_flex {
+	display: flex;
+}
+
+.weui_cell.mod_shop_cell,
+.mod_shop_cell {
+	box-sizing: border-box;
+	.px2rem(100px, padding-left);
+	.rel-obj;
+	::before {
+		content: '';
+		.px2rem(38px, width);
+		.px2rem(36px, height);
+		background: url('@{img}shop_icon.png') no-repeat 0 0;
+		background-size: contain;
+		position: absolute;
+		top: 50%;
+		.px2rem(33px, left);
+		transform: translateY(-50%);
+	}
+	&.current {
+		color: #09BB07;
+	}
+}

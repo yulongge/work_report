@@ -1,0 +1,127 @@
+//用页名提高样式优先级，覆盖插件原有样式
+.page_timerange {
+	input[type=checkbox].mod_round_checkbox{
+		.px2rem(78px, width);
+		.px2rem(47px, height);
+		.px2rem(47px, border-radius);
+		.px2rem(3px, border-weidth);
+		&::after{
+			.px2rem(-2px, top);
+			.px2rem(-2px, left);
+			.px2rem(44px, width);
+			.px2rem(44px, height);
+			border-radius: 50%;
+			.px2rem(2px, border-width);
+		}
+		&:checked{
+			&::after{
+				.px2rem(30px, left);
+			}
+		}
+	}
+	#lunar_cale_panel{
+		.px2rem(259px * 2, height);
+		.px2rem(2px, border-top-width);
+		.hd{
+			.px2rem(88px, height);
+			.px2rem(2px, border-bottom-width);
+			label {
+	    		input {
+	    			.px2rem(10px, margin-right);
+	    		}
+			}
+			.finishBtn{
+				.px2rem(43px*2, width);
+				.px2rem(28px*2, height);
+				.px2rem(1px*2, border-width);
+				.px2rem(4px*2, -webkit-border-radius);
+				.px2rem(14px*2, font-size);
+				.px2rem(28px*2, line-height);
+				text-shadow: none;
+			}
+		}
+		.bd{
+			.px2rem(206px*2, height);
+			.px2rem(8px*2, padding-top);
+		}
+		.win{
+			.px2rem(195px*2, height);
+			.px2rem(4px*2, -webkit-border-radius);
+			.px2rem(1px*2, border-width);
+		}
+		.wdecoration {
+
+			.wbk{
+				.px2rem(195px*2, height);
+				.px2rem_2(0, 2px*2, margin);
+			}
+			.wline{
+				.px2rem(195px*2, height);
+				.px2rem(2px*2, width);
+			}
+		}
+
+		.wglass{
+			.px2rem(41px*2, height);
+			.px2rem(76px*2, top);
+			.px2rem_4(2px, 0, 2px, 0, border-width);
+		}
+
+		.wmain{
+			.px2rem(195px*2, height);
+
+			.wbox{
+				@mright: 8px;
+				.px2rem(195px*2, height);
+				.px2rem_2(0, 4px, margin);
+
+				li{
+					.px2rem(39px*2, height);
+					.px2rem(39px*2, line-height);
+					.px2rem(18px*2, font-size);
+				}
+
+				&.day,
+				&.hour{
+					.px2rem(4px*2, margin-right);
+				}
+
+				&.year{
+					.px2rem(@mright, margin-right);
+					i{
+						.px2rem(15px*2, font-size);
+					}
+				}
+				&.day {
+					li.today{
+						.px2rem(40px);
+						text-shadow:0 1px #ededed;
+					}
+					i{
+						.px2rem(30px);
+					}
+				}
+				&.month{
+					.px2rem(@mright, margin-right);
+				}
+			}
+		}
+
+		&.normal {
+			.px2rem(28px);
+			.hd {
+				.px2rem(30px, margin-left);
+			}
+			.bd {
+				.win {
+					.wglass {
+						.px2rem(2px, border-width);
+						.px2rem(60px, height);
+						transform: translateY( unit(-32px / @rem-base, rem) );
+					}
+				}
+			}
+		} //end of .normal
+
+	} //end of #lunar_cale_panel
+}
